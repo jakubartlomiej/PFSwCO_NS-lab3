@@ -43,7 +43,7 @@ jobs:
           flags: 'g'     
 
       - name: Generate deployment package
-        run: zip -r deploy.zip docker-compose.yaml      
+        run: zip -r deploy.zip docker-compose.yml     
             
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v20
