@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  app:
+    image: jakubartlomiej/zad2:ghaction
+    ports:
+      - 80:80
