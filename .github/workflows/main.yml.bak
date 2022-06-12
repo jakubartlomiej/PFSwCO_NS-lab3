@@ -13,6 +13,9 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
         
       - name: Buildx set-up
         id: buildx
@@ -29,6 +32,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
+          platforms: linux/arm/v7, linux/arm64/v8, linux/amd64
           push: true
           tags: |
-            jakubartlomiej/zad2:ghaction
+            jakubartlomiej/lab3:ghaction
