@@ -9,6 +9,7 @@
     if ($remote == '127.0.0.1' || $remote == 'localhost' || $remote == '172.17.0.1'){
         echo "IP address: ".$remote." ***** TIME UTC: ".date("Y-m-d H:i:s");
     } else {
+		echo $remote;
    $url = "https://lokalizacjaip.pl/api/index/localise/";
     
     $curl = curl_init();
