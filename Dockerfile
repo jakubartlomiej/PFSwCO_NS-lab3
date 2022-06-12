@@ -2,7 +2,7 @@ FROM alpine:3.14
 LABEL "MAINTAINER" "Bartłomiej Jakubowski"
 
 RUN apk add --update lighttpd
-RUN apk add php7 php7-fpm php7-opcache php7-cgi
+RUN apk add php7-cgi php7-curl php7-json
 
 COPY lighttpd.conf /etc/lighttpd/
 COPY index.php /var/www/
